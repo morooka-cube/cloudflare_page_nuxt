@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const ids = ['foo', 'bar', 'hoge', 'redirect']
+const ids = ['hello', 'foo', 'bar', 'hoge', 'redirect']
 </script>
 
 <template>

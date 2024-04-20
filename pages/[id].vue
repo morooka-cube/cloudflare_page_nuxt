@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const { data: asyncDate } = useAsyncData(() => {
+const { data: asyncDate } = useAsyncData(async () => {
   const date = new Date
   console.log(date.toISOString())
   return date
@@ -12,7 +12,7 @@ const { data: asyncDate } = useAsyncData(() => {
   <div>
     <h1>id: {{  route.params.id }}</h1>
     <p>id: {{  route.params.id }}</p>
-    <p>date: {{ asyncDate.toISOString() }}</p>
+    <p>date: {{ asyncDate?.toISOString() }}</p>
     <NuxtLink to="/">トップページに戻る</NuxtLink>
   </div>
 </template>
