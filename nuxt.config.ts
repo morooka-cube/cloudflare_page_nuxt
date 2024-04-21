@@ -4,9 +4,6 @@ export default defineNuxtConfig({
   modules: ['nitro-cloudflare-dev'],
   routeRules: {
     '/': { prerender: true },
-    '/hello': { prerender: true },
-    '/redirect': { redirect: 'https://example.com' },
-    '/**': { swr: 60 },
-    '/api/**': { swr: 0 },
+    '/redirect': { redirect: 'https://example.com' }
   }
 });

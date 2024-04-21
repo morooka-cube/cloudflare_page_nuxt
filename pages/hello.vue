@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const route = useRoute()
 
-const{ data } = useFetch('/api/hello', { server: false })
+const{ data } = useFetch('/api/hello')
 </script>
 
 <template>
