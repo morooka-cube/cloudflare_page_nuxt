@@ -1,11 +1,14 @@
-import { CfProperties, Request, ExecutionContext } from '@cloudflare/workers-types';
+import { CfProperties, Request, ExecutionContext, KVNamespace } from '@cloudflare/workers-types';
 
 declare module 'h3' {
     interface H3EventContext {
-        cf: CfProperties,
+        cf: CfProperties;
         cloudflare: {
-          request: Request,
-          context: ExecutionContext,
+          request: Request;
+          env: {
+            NUXT_TODO: KVNamespace;
+          }
+          context: ExecutionContext;
         };
     }
 }

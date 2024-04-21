@@ -1,0 +1,3 @@
+kv_namespaces = [
+    { binding = "NUXT_TODO", id = "7881d1687cb44a1080a6f6984ad91b53" }
+]
