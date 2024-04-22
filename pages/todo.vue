@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data, refresh } = useFetch('/api/todo')
+const { data, refresh } = await useFetch('/api/todo')
 const newItem = ref('')
 
 const posting = ref(false)
