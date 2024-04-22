@@ -1,8 +1,8 @@
 export default defineEventHandler(async (event) => {
-  const id = parseInt(event.context.params?.id ?? '0')
+  const todo = await readBody<{ name: string }>(event);
 
   const todoList = await getTodoList(event.context);
-  todoList.splice(id, 1);
+  todoList.push(todo.name);
   
   await putTodoList(event.context, todoList);
 });
