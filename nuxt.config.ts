@@ -4,6 +4,15 @@ export default defineNuxtConfig({
   modules: ['nitro-cloudflare-dev'],
   routeRules: {
     '/': { prerender: true },
-    '/redirect': { redirect: 'https://example.com' }
+    '/api/time': {
+      cache: {
+        maxAge: 0,
+        staleMaxAge: 30,
+        swr: true
+      }
+    },
+  },
+  nitro: {
+    preset: 'cloudflare-pages'
   }
 });

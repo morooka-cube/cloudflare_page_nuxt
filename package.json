@@ -6,7 +6,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "wrangler pages dev dist/",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
